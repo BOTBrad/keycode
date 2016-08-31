@@ -8225,21 +8225,13 @@ var _user$project$Keycode$Key = function (a) {
 var _user$project$Keycode$main = {
 	main: _elm_lang$html$Html_App$program(
 		{
-			init: {
-				ctor: '_Tuple2',
-				_0: _elm_lang$core$Native_Utils.chr(' '),
-				_1: _elm_lang$core$Platform_Cmd$none
-			},
+			init: {ctor: '_Tuple2', _0: 0, _1: _elm_lang$core$Platform_Cmd$none},
 			subscriptions: function (_p1) {
-				return _elm_lang$keyboard$Keyboard$downs(
-					function (_p2) {
-						return _user$project$Keycode$Key(
-							_elm_lang$core$Char$fromCode(_p2));
-					});
+				return _elm_lang$keyboard$Keyboard$downs(_user$project$Keycode$Key);
 			},
-			view: function (_p3) {
+			view: function (_p2) {
 				return _elm_lang$html$Html$text(
-					_elm_lang$core$String$fromChar(_p3));
+					_elm_lang$core$Basics$toString(_p2));
 			},
 			update: _user$project$Keycode$update
 		})
